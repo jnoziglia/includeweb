@@ -1,0 +1,13 @@
+.font-mon{font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;}
+.banner{
+	color:#fafafa;
+}
+.title{
+	color:#d32f2f;
+}
+
+.box{opacity: 0;}
+
+.servicios{
+	min-height: 500px;
+}
