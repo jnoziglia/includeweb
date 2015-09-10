@@ -5,7 +5,7 @@ var router = express.Router();
 
 
 router.get('/', function(req, res) {
-	res.sendFile(__dirname + '/views/index.html');
+	res.sendFile(__dirname + '/views/indexx.html');
 });
 
 app.use(express.static('node_modules/materialize-css/bin'));
@@ -18,5 +18,5 @@ app.use('/', router);
 var server = require('http').Server(app);
 
 server.listen(8010, function() {
-  console.log("Node server running on http://localhost:8000");
+  console.log("Node server running on http://localhost:8010");
 });
