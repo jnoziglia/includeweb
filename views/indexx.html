@@ -22,7 +22,7 @@
           <a href="#" class="brand-logo font-mon">INCLUDE WEB</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#servicios">¿Qué hacemos?</a></li>
-            <li><a href="badges.html">Components</a></li>
+            <li><a href="#trabajos">Trabajos</a></li>
             <li><a href="collapsible.html">JavaScript</a></li>
           </ul>
         </div>
@@ -42,6 +42,7 @@
   </div>
 
     </div>
+
    <div class="container">
 
     <div class="section servicios box" id="servicios">
@@ -96,7 +97,7 @@
 
     <div class="section">
       <!--   Icon Section   -->
-      <h2 class="center">Trabajos</h2>
+      <h2 class="center title font-mon">Trabajos</h2>
       <div class="row">
         <div class="col s12 m4 portfolio-item ">
 
@@ -108,30 +109,44 @@
               <span class="card-title activator grey-text text-darken-4">DualComp</span>
               <p><a href="">Maquetación responsive</a></p>
             </div>
-            <div class="card-transform valign-wrapper">
-              <h5 class="valign"><a href="#modalDualcomp" class="modal-trigger">+</a></h5>
-            </div>
+           <a href="#modalDualcomp" class="modal-trigger"> <div class="card-transform valign-wrapper">
+              <h5 class="valign">+</h5>
+            </div></a>
           </div>
           
         </div>
 
+        <div class="col s12 m4 portfolio-item ">
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><img class="responsive-img" src="images/"></h2>
-            <h5 class="center">Emblue</h5>
-
-            <p class="light center">Responsive Emails</p>
+          <div class="card">
+            <div class="card-image waves-effect waves-light">
+              <img width="193" src="images/logo-1.png" >
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">emBlue</span>
+              <p><a href="">Responsive Emails</a></p>
+            </div>
+           <a href="#modalEmbluew" class="modal-trigger"> <div class="card-transform valign-wrapper">
+              <h5 class="valign">+</h5>
+            </div></a>
           </div>
+          
         </div>
+        <div class="col s12 m4 portfolio-item ">
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><img class="responsive-img" src="http://placehold.it/350x150"></h2>
-            <h5 class="center">Dualcomp</h5>
-
-            <p class="light center">Desarrollo web</p>
+          <div class="card">
+            <div class="card-image waves-effect waves-light">
+              <img width="193" src="images/logo-1.png" >
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">emBlue</span>
+              <p><a href="">Responsive Emails</a></p>
+            </div>
+           <a href="#modalEmbluew" class="modal-trigger"> <div class="card-transform valign-wrapper">
+              <h5 class="valign">+</h5>
+            </div></a>
           </div>
+          
         </div>
       </div>
 
@@ -143,23 +158,42 @@
     <div class="parallax-container ">
       <div class="parallax"><img src="http://ironsummitmedia.github.io/startbootstrap-creative/img/header.jpg"></div>
     </div>
+    <div class="section" id="contacto">
+      <div class="container">
+      <h2 class="center title font-mon">Contacto</h2>
+           <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Nombre</label>
+        </div>
+       <div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <input id="icon_telephone" type="email" class="validate">
+          <label for="icon_telephone">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="icon_telephone">Mensaje</label>
+        </div>
+      </div>
+     
+    </form>
+  </div>
+      </div>
+    </div>
       <footer class="page-footer grey darken-4">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">Inlcude Web</h5>
                 <p class="grey-text text-lighten-4"><a href="mailto:info@includeweb.com.ar?subject=Contacto Web">info@includeweb.com.ar</a></p>
-                <p class="grey-text text-lighten-4"><a href="#modalDualcomp" class="modal-trigger">info@includeweb.com.ar</a></p>
-                  <!-- Modal Structure -->
-        <div id="modalDualcomp" class="modal">
-          <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-          </div>
-        </div>
+                
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Social</h5>
@@ -178,7 +212,16 @@
           </div>
         </footer>
         <!-- modals -->
-       
+         <div id="modalDualcomp" class="modal">
+          <div class="modal-content">
+            <h4>DualComp</h4>
+            <p>Maquetado responsive, con Bootstrap 3, HTML5, CSS3 y jQuery</p>
+             <img class="materialboxed" width="650" src="images/dualcompweb.png">
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+          </div>
+        </div>
           
     <!--Import jQuery before materialize.js-->
     
@@ -186,6 +229,8 @@
     <script type="text/javascript" src="../materialize.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+           $('.materialboxed').materialbox();
+          $('.modal-trigger').leanModal();
              Materialize.toast('Hola!', 4000)
                 $('.parallax').parallax();
             var options = [

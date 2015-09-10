@@ -12,6 +12,7 @@ app.use(express.static('node_modules/materialize-css/bin'));
 app.use(express.static('node_modules/materialize-css/font'));
 app.use(express.static('css'));
 app.use(express.static('images'));
+app.use(express.static('public'));
 
 app.use('/', router);
 
