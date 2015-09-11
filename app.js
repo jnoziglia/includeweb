@@ -7,6 +7,9 @@ var router = express.Router();
 router.get('/', function(req, res) {
 	res.sendFile(__dirname + '/views/indexx.html');
 });
+router.get('/oscuro', function(req, res) {
+	res.sendFile(__dirname + '/views/oscuro.html');
+});
 
 app.use(express.static('node_modules/materialize-css/bin'));
 app.use(express.static('node_modules/materialize-css/font'));

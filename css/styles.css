@@ -1,11 +1,14 @@
+body{
+  color:#fafafa;
+}
 .font-mon{font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;}
 .banner{
 	color:#fafafa;
 }
 .title{
-	color:#d32f2f;
-}
+	color:#cfd8dc ;
 
+}
 .box{opacity: 0;}
 
 .servicios{
@@ -30,6 +33,10 @@
 
 .portfolio-item {
 	position: relative;
+
+}
+.portfolio-item .card{
+  min-height: 350px;
 }
 
 .card-hover {
@@ -77,4 +84,8 @@
   font-weight: 700;
   src: local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.modal-content{
+  color: #616161!important; 
 }
