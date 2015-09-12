@@ -162,7 +162,7 @@
       <div class="container">
       <h2 class="center title font-mon">Contacto</h2>
            <div class="row">
-    <form class="col s12">
+    <form id="contact-form" class="col s12">
       <div class="row">
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">account_circle</i>
@@ -196,7 +196,7 @@
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">Inlcude Web</h5>
+                <h5 class="white-text">Include Web</h5>
                 <p class="grey-text text-lighten-4"><a href="mailto:info@includeweb.com.ar?subject=Contacto Web">info@includeweb.com.ar</a></p>
                 
               </div>
@@ -211,7 +211,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2015 Copyright - InlcudeWeb
+            © 2015 Copyright - IncludeWeb
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
@@ -263,31 +263,36 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="../materialize.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-           $('.materialboxed').materialbox();
-          $('.modal-trigger').leanModal();
-             Materialize.toast('Hola!', 4000)
-                $('.parallax').parallax();
-            var options = [
-    {selector: '.box', offset:300, callback: 'Materialize.fadeInImage(".box")' },
-  /*  {selector: '.box2', offset: 200, callback: 'Materialize.fadeInImage(".box2")' },
-    {selector: '.box3', offset: 200, callback: 'Materialize.fadeInImage(".box3")' },*/
-  ];
-  Materialize.scrollFire(options);
-        
-                /*  var options = [ {selector: '#staggered-test', offset: 50, callback: 'Materialize.toast("This is our ScrollFire Demo!", 1500 )' }, {selector: '#staggered-test', offset: 205, callback: 'Materialize.toast("Please continue scrolling!", 1500 )' }, {selector: '#staggered-test', offset: 400, callback: 'Materialize.showStaggeredList("#staggered-test")' }, {selector: '#image-test', offset: 500, callback: 'Materialize.fadeInImage("#image-test")' } ]; Materialize.scrollFire(options); */
-          /*$('.portfolio-item').mouseenter(function(){
-            var item = $(this).find('.card-reveal');
-            
-            item.toggleClass('card-transform');
-          });*/
+      $(document).ready(function(){
+        $('.materialboxed').materialbox();
+        $('.modal-trigger').leanModal();
+        Materialize.toast('Hola!', 4000)
+        $('.parallax').parallax();
+        var options = [
+          {selector: '.box', offset:300, callback: 'Materialize.fadeInImage(".box")' },
+          /*  {selector: '.box2', offset: 200, callback: 'Materialize.fadeInImage(".box2")' },
+          {selector: '.box3', offset: 200, callback: 'Materialize.fadeInImage(".box3")' },*/
+        ];
+        Materialize.scrollFire(options);
 
-          /*$('.portfolio-item').mouseleave(function(){
-            var item = $(this).find('.card-reveal');
-            
-            item.attr('style', 'display: none; transform: translateY(0);');
-          });*/
+        /*  var options = [ {selector: '#staggered-test', offset: 50, callback: 'Materialize.toast("This is our ScrollFire Demo!", 1500 )' }, {selector: '#staggered-test', offset: 205, callback: 'Materialize.toast("Please continue scrolling!", 1500 )' }, {selector: '#staggered-test', offset: 400, callback: 'Materialize.showStaggeredList("#staggered-test")' }, {selector: '#image-test', offset: 500, callback: 'Materialize.fadeInImage("#image-test")' } ]; Materialize.scrollFire(options); */
+        /*$('.portfolio-item').mouseenter(function(){
+        var item = $(this).find('.card-reveal');
+
+        item.toggleClass('card-transform');
+        });*/
+
+        /*$('.portfolio-item').mouseleave(function(){
+        var item = $(this).find('.card-reveal');
+
+        item.attr('style', 'display: none; transform: translateY(0);');
+        });*/
+
+        $('#contact-form').submit(function(e) {
+          e.preventDefault();
         });
+
+      });
 
 $(function() {
   $('.scroll').click(function() {
