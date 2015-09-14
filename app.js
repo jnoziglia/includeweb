@@ -42,7 +42,7 @@ function contact(req, res) {
 	console.log(req.body.mensaje);*/
 	transporter.sendMail({
     from: req.body.mail,
-    to: 'webpage@includeweb.com',
+    to: 'webpage@includeweb.com.ar',
     subject: 'Consulta',
     text: req.body.nombre+'\n\n'+req.body.mensaje
   },

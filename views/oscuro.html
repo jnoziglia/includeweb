@@ -201,7 +201,7 @@
         </div>
       </div>
       <div class="row">
-        <button class="btn waves-effect waves-light right light-blue" type="submit" name="action">Enviar
+        <button class="btn waves-effect waves-light right light-blue" type="submit" name="action" id="send-form">Enviar
           <i class="material-icons">send</i>
         </button>
       </div>
@@ -319,27 +319,32 @@
             item.attr('style', 'display: none; transform: translateY(0);');
           });*/
           $('#contact-form').submit(function(e) {
-          var info = {
-            nombre : $('#icon_prefix').val(),
-            mail : $('#icon_telephone').val(),
-            mensaje : $('#textarea1').val().replace(/<br\s*\/?>/mg,"\n")
-          };
-          $.ajax({
-            type: "POST",
-            url: "/contact",
-            data: info
-          })
-            .done(function( data ) {
-              console.log(data);
-              if ( data == 1 ) {
-                alert( "El mensaje fue enviado correctamente" );
-              }
-              else {
-                alert( "Mensaje no pudo ser enviado" );
-              }
-            });
-          e.preventDefault();
-        });
+            $('#send-form').prop('disabled', true);
+            var info = {
+              nombre : $('#icon_prefix').val(),
+              mail : $('#icon_telephone').val(),
+              mensaje : $('#textarea1').val().replace(/<br\s*\/?>/mg,"\n")
+            };
+            $.ajax({
+              type: "POST",
+              url: "/contact",
+              data: info
+            })
+              .done(function( data ) {
+                console.log(data);
+                if ( data == "hola" ) {
+                  alert( "El mensaje fue enviado correctamente" );
+                  $('#icon_prefix').val("");
+                  $('#icon_telephone').val("");
+                  $('#textarea1').val("");
+                }
+                else {
+                  alert( "Mensaje no pudo ser enviado" );
+                }
+                $('#send-form').prop('disabled', false);
+              });
+            e.preventDefault();
+          });
         });
 
 $(function() {
