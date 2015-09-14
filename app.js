@@ -13,7 +13,7 @@ var transporter = nodemailer.createTransport();
 var router = express.Router();
 
 router.get('/', function(req, res) {
-	res.sendFile(__dirname + '/views/indexx.html');
+	res.sendFile(__dirname + '/views/oscuro.html');
 });
 router.get('/oscuro', function(req, res) {
 	res.sendFile(__dirname + '/views/oscuro.html');
