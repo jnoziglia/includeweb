@@ -289,12 +289,23 @@
         });*/
 
         $('#contact-form').submit(function(e) {
-          var info = {
-            nombre = $('#icon_prefix').val(),
-            mail = $('#icon_telephone').val(),
-            mensaje = $('#textarea1').val().replace(/<br\s*\/?>/mg,"\n");
-          };
+          alert("hola");
           e.preventDefault();
+          var info = {
+            nombre : $('#icon_prefix').val(),
+            mail : $('#icon_telephone').val(),
+            mensaje : $('#textarea1').val().replace(/<br\s*\/?>/mg,"\n");
+          };
+          $.ajax({
+            type: "POST",
+            url: "/contact",
+            data: info
+          })
+            .done(function( data ) {
+              if ( console && console.log ) {
+                console.log( "Sample of data:", data.slice( 0, 100 ) );
+              }
+            });
         });
 
       });
