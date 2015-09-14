@@ -166,20 +166,20 @@
       <div class="row">
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate">
+          <input id="icon_prefix" type="text" class="validate required">
           <label for="icon_prefix">Nombre</label>
         </div>
        <div class="input-field col s12 m6">
           <i class="material-icons prefix">email</i>
-          <input id="icon_telephone" type="email" class="validate">
+          <input id="icon_telephone" type="email" class="validate required">
           <label for="icon_telephone">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12 m12">
           <i class="material-icons prefix">mode_edit</i>
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="icon_telephone">Mensaje</label>
+          <textarea id="textarea1" class="materialize-textarea required"></textarea>
+          <label for="textarea1">Mensaje</label>
         </div>
       </div>
       <div class="row">
@@ -289,6 +289,11 @@
         });*/
 
         $('#contact-form').submit(function(e) {
+          var info = {
+            nombre = $('#icon_prefix').val(),
+            mail = $('#icon_telephone').val(),
+            mensaje = $('#textarea1').val().replace(/<br\s*\/?>/mg,"\n");
+          };
           e.preventDefault();
         });
 
