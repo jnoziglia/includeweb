@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jnoziglia/includeweb#readme",
   "dependencies": {
+    "body-parser": "^1.13.3",
     "express": "^4.13.3",
     "materialize-css": "^0.96.1",
     "nodemailer": "^1.4.0"
