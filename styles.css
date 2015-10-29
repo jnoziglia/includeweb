@@ -1,1 +1,6 @@
 .logo{font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;}
+
+.no-shadow {
+	box-shadow: none
+	-webkit-box-shadow: none;
+}

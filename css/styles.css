@@ -89,3 +89,8 @@ body{
 .modal-content{
   color: #616161!important; 
 }
+
+.no-shadow {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
