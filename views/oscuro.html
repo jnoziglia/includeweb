@@ -186,7 +186,7 @@
 
           <div class="card">
             <div class="card-image waves-effect waves-light">
-              <img width="193" src="images/sistema.png" >
+              <img width="193" src="images/patron_costas.png" >
             </div>
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4">Patron Costas</span>
@@ -212,28 +212,28 @@
       <div class="container">
       <h2 class="center title font-mon">Contacto</h2>
            <div class="row">
-    <form id="contact-form" class="col s12">
+    <form class="col s12">
       <div class="row">
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate" required>
+          <input id="icon_prefix" type="text" class="validate">
           <label for="icon_prefix">Nombre</label>
         </div>
        <div class="input-field col s12 m6">
           <i class="material-icons prefix">email</i>
-          <input id="icon_telephone" type="email" class="validate" required>
+          <input id="icon_telephone" type="email" class="validate">
           <label for="icon_telephone">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12 m12">
           <i class="material-icons prefix">mode_edit</i>
-          <textarea id="textarea1" class="materialize-textarea" required></textarea>
-          <label for="textarea1">Mensaje</label>
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="icon_telephone">Mensaje</label>
         </div>
       </div>
       <div class="row">
-        <button class="btn waves-effect waves-light right light-blue" type="submit" name="action" id="send-form">Enviar
+        <button class="btn waves-effect waves-light right light-blue" type="submit" name="action">Enviar
           <i class="material-icons">send</i>
         </button>
       </div>
@@ -246,7 +246,7 @@
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">Include Web</h5>
+                <h5 class="white-text">Inlcude Web</h5>
                 <p class="grey-text text-lighten-4"><a href="mailto:info@includeweb.com.ar?subject=Contacto Web">info@includeweb.com.ar</a></p>
                 
               </div>
@@ -261,7 +261,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2015 Copyright - IncludeWeb
+            © 2015 Copyright - InlcudeWeb
            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
             </div>
           </div>
@@ -326,7 +326,7 @@
             <h4>Patron Costas</h4>
             <p><strong>Trabajo:</strong> Maquetación de sitio.<br /><strong>Tecnologías:</strong>  PHP, MySql, HTML5, CSS3 y jQuery</p>
             <p><a href="http://www.patroncostas.com/" target="_blank" class="waves-effect waves-light btn"><i class="material-icons left">search</i>Ver</a></p>
-             <img class="materialboxed responsive-img"  src="images/sistema.png">
+             <img class="materialboxed responsive-img"  src="images/patron_costas.png">
              
           </div>
           <div class="modal-footer">
@@ -376,33 +376,6 @@
             
             item.attr('style', 'display: none; transform: translateY(0);');
           });*/
-          $('#contact-form').submit(function(e) {
-            $('#send-form').prop('disabled', true);
-            var info = {
-              nombre : $('#icon_prefix').val(),
-              mail : $('#icon_telephone').val(),
-              mensaje : $('#textarea1').val().replace(/<br\s*\/?>/mg,"\n")
-            };
-            $.ajax({
-              type: "POST",
-              url: "/contact",
-              data: info
-            })
-              .done(function( data ) {
-                console.log(data);
-                if ( data == "hola" ) {
-                  alert( "El mensaje fue enviado correctamente" );
-                  $('#icon_prefix').val("");
-                  $('#icon_telephone').val("");
-                  $('#textarea1').val("");
-                }
-                else {
-                  alert( "Mensaje no pudo ser enviado" );
-                }
-                $('#send-form').prop('disabled', false);
-              });
-            e.preventDefault();
-          });
         });
 
 $(function() {
