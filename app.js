@@ -15,8 +15,8 @@ var router = express.Router();
 router.get('/', function(req, res) {
 	res.sendFile(__dirname + '/views/oscuro.html');
 });
-router.get('/verde', function(req, res) {
-	res.sendFile(__dirname + '/views/indexx.html');
+router.get('/proximamente', function(req, res) {
+	res.sendFile(__dirname + '/views/test.html');
 });
 
 router.post('/contact', contact);
