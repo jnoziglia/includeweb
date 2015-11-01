@@ -13,10 +13,10 @@ var transporter = nodemailer.createTransport();
 var router = express.Router();
 
 router.get('/', function(req, res) {
-	res.sendFile(__dirname + '/views/oscuro.html');
+	res.sendFile(__dirname + '/views/test.html');
 });
 router.get('/proximamente', function(req, res) {
-	res.sendFile(__dirname + '/views/test.html');
+	res.sendFile(__dirname + '/views/test2.html');
 });
 
 router.post('/contact', contact);
