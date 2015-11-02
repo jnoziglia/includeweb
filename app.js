@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
 	res.sendFile(__dirname + '/views/test.html');
 });
 router.get('/proximamente', function(req, res) {
-	res.sendFile(__dirname + '/views/test2.html');
+	res.sendFile(__dirname + '/views/test3.html');
 });
 
 router.post('/contact', contact);
