@@ -44,7 +44,7 @@ function subscribe(req, res) {
 	console.log(req.body.mail);
 	console.log(req.body.mensaje);*/
 	transporter.sendMail({
-    from: req.body.mail,
+    from: 'webpage@includeweb.com.ar',
     to: 'webpage@includeweb.com.ar',
     subject: 'Suscripción',
     text: req.body.mail
@@ -64,10 +64,10 @@ function contact(req, res) {
 	console.log(req.body.mail);
 	console.log(req.body.mensaje);*/
 	transporter.sendMail({
-    from: req.body.mail,
+    from: 'webpage@includeweb.com.ar',
     to: 'webpage@includeweb.com.ar',
     subject: 'Consulta',
-    text: req.body.nombre+'\n\n'+req.body.mensaje
+    text: req.body.nombre+'\n\n'+req.body.mensaje+'\n\n'+req.body.mail
   },
   function(error, info){
 		if(error){
