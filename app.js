@@ -18,6 +18,9 @@ router.get('/', function(req, res) {
 router.get('/games', function(req, res) {
 	res.sendFile(__dirname + '/views/games.html');
 });
+router.get('/oldversion', function(req, res) {
+	res.sendFile(__dirname + '/views/indexx.html');
+});
 
 router.post('/contact', contact);
 
