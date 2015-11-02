@@ -19,7 +19,7 @@ router.get('/games', function(req, res) {
 	res.sendFile(__dirname + '/views/games.html');
 });
 router.get('/oldversion', function(req, res) {
-	res.sendFile(__dirname + '/views/indexx.html');
+	res.sendFile(__dirname + '/views/oscuro.html');
 });
 
 router.post('/contact', contact);
