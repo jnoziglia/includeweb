@@ -78,6 +78,34 @@
       }
     </style>
 
+    <script type="text/javascript" defer>
+      $(document).ready(function() {
+        $('#contact-form').submit(function(e) {
+          $('#send-form').prop('disabled', true);
+          var info = {
+            mail : $('#mail').val()
+          };
+          $.ajax({
+            type: "POST",
+            url: "/subscribe",
+            data: info
+          })
+            .done(function( data ) {
+              console.log(data);
+              if ( data == "hola" ) {
+                alert( "El mensaje fue enviado correctamente" );
+                $('#mail').val("");¡
+              }
+              else {
+                alert( "Mensaje no pudo ser enviado" );
+              }
+              $('#send-form').prop('disabled', false);
+            });
+          e.preventDefault();
+        });
+      });
+    </script>
+
   </head>
   <body class="gradient6">
   <div class="container">
@@ -91,7 +119,9 @@
       <h3>Estamos trabajando en nuestro nuevo sitio.</h3>
     </div>
     <div class="row">
-      <input type="text" placeholder="Ingrese su e-mail"><button type="submit" class="waves-effect waves-light btn">Enviar</button>
+      <form id="contact-form">
+        <input id="mail" name="mail" type="text" placeholder="Ingrese su e-mail"><button type="submit" id="send-form" class="waves-effect waves-light btn">Enviar</button>
+      </form>
     </div>
     <div class="row grey-text text-lighten-4"><a href="mailto:info@includeweb.com.ar" class="grey-text text-lighten-4">info@includeweb.com.ar</a></div>    
   </div>

@@ -20,6 +20,7 @@ router.get('/games', function(req, res) {
 });
 
 router.post('/contact', contact);
+router.post('/subscribe', subscribe);
 
 app.use(express.static('node_modules/materialize-css/bin'));
 app.use(express.static('node_modules/materialize-css/font'));
@@ -35,6 +36,25 @@ server.listen(8010, function() {
   console.log("Node server running on http://localhost:8010");
 });
 
+function subscribe(req, res) {
+	/*console.log(req.body.nombre);
+	console.log(req.body.mail);
+	console.log(req.body.mensaje);*/
+	transporter.sendMail({
+    from: req.body.mail,
+    to: 'webpage@includeweb.com.ar',
+    subject: 'Suscripción',
+    text: req.body.mail
+  },
+  function(error, info){
+		if(error){
+		  res.send("error");
+		}
+		else {
+		  res.send("hola");
+		}
+	});
+}
 
 function contact(req, res) {
 	/*console.log(req.body.nombre);
